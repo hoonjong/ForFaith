@@ -6,21 +6,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-<!-- -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="이미지를 클릭하시면 관련 내용으로 이동합니다!"
-        android:padding="8dp"
-        android:textSize="16sp"
         android:fontFamily="@font/nanumbold"
-        android:gravity="center"/>
+        android:layout_margin="3dp"
+        android:gravity="center|bottom"
+        android:padding="3dp"
+        android:text="이미지를 클릭하시면 관련 내용으로 이동합니다!"
+        android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
 
 
         <ImageView
@@ -30,7 +30,7 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:scaleType="centerCrop"
-            android:src="@drawable/jong" />
+            android:src="@drawable/todaybible" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -39,10 +39,41 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:scaleType="centerCrop"
-            android:src="@drawable/jong" />
+            android:src="@drawable/todaypray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:text="오늘의 말씀" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="오늘의 기도"
+            android:textColor="@android:color/holo_red_dark" />
 
 
     </LinearLayout>
+
 
 
 
