@@ -1,25 +1,18 @@
 package com.jongdroid.forthefaith;
 
-import android.app.ProgressDialog;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 public class TodayBible  extends AppCompatActivity {
     private Button btn;
     private ImageView imageView;
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +21,14 @@ public class TodayBible  extends AppCompatActivity {
 
         btn = (Button) findViewById(R.id.button);
         imageView = (ImageView) findViewById(R.id.imageView);
+        spinner = (Spinner) findViewById(R.id.spinner);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { Toast.makeText(TodayBible.this, "잠시만 기다려주세요.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
